@@ -8,7 +8,7 @@
         function loadExample(name) {
             $   .get("examples/" + name + ".elea")
                 .done(function(data) {
-                    $(".program-text").html(data);
+                    $("#program-text").html(data);
                 });
         }
 
@@ -22,7 +22,7 @@
 If you've come here, you're a bit early to the party. I haven't finished this yet. Feel free to use it though.
 </p>
 <form method="post" action="run.php">
-    <textarea id="program-text" width="600" height="480">
+    <textarea id="program-text" width="800" height="600">
     </textarea>
     <br/>
     <input type="submit" value="Supercompile with Elea"/>
