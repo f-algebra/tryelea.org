@@ -6,8 +6,10 @@
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         function loadExample(name) {
-            var exampleText = $.get("examples/" + name + ".elea");
-            $(".program-text").html(exampleText);
+            $   .get("examples/" + name + ".elea")
+                .done(function(data) {
+                    $(".program-text").html(data);
+                });
         }
 
         $(document).ready(function() {
