@@ -9,7 +9,7 @@ try {
 	fwrite($file, $src);
 	fclose($file);
 
-	$proofs = shell_exec("cd elea && ulimit -t 30 ./elea $filename 2>&1");
+	$proofs = shell_exec("bash -c 'cd elea && ulimit -t 30 ./elea $filename 2>&1'");
 	echo nl2br($proofs);
 } catch (Exception $e) {
 	echo "Exception: " . $e->getMessage();
